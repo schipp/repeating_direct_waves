@@ -1,0 +1,247 @@
+[Fig1]
+type = "data"
+
+master_station = "IV.BRMO"
+master_station_coords = [10.37218, 46.47616]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 10
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# beamforming slowness grid
+# defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.005
+
+[Fig2]
+type = "data"
+
+master_station = "PL.OJC"
+master_station_coords = [19.7984, 50.2195]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 10
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# beamforming slowness grid
+# defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.005
+
+[Fig4]
+type = "synthetics"
+
+master_station = "IV.BRMO"
+master_station_coords = [10.37218, 46.47616]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 10
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# slowness grid, defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.01
+
+# synthetics settings
+medium_velocity = 3
+
+# source type
+source_type = "ricker"
+apply_excitation_pattern_for_boundary = false
+apply_excitation_pattern_for_isolated = true
+interval = 150
+interval_count = 50
+
+phase_mode = "random"
+
+# isolated sources
+n_isolated_sources = 1
+region_weights = [1.0]
+center_lons = [-23.0]
+center_lats = [62.5]
+contribution_amplitude_ratio = 0.25
+
+# boundary sources
+n_boundary_sources = 1000
+radius = 1000
+
+[Fig6]
+type = "synthetics"
+
+master_station = "IV.BRMO"
+master_station_coords = [10.37218, 46.47616]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 2
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# slowness grid, defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.01
+
+# synthetics settings
+
+medium_velocity = 3
+
+# source type
+source_type = "microseism"
+apply_excitation_pattern_for_boundary = false
+apply_excitation_pattern_for_isolated = false
+interval = 25
+interval_count = 75
+
+phase_mode = "random"
+
+# isolated sources
+n_isolated_sources = 1
+region_weights = [1.0]
+center_lons = [-23.0]
+center_lats = [62.5]
+contribution_amplitude_ratio = 1
+
+# boundary sources
+n_boundary_sources = 1000
+radius = 1000
+
+[Fig7]
+type = "synthetics"
+
+master_station = "IV.BRMO"
+master_station_coords = [10.37218, 46.47616]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 2
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# slowness grid, defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.01
+
+# synthetics settings
+
+medium_velocity = 3
+
+# source type
+source_type = "microseism"
+apply_excitation_pattern_for_boundary = false
+apply_excitation_pattern_for_isolated = false
+interval = 25
+interval_count = 75
+
+phase_mode = "random"
+
+# isolated sources
+n_isolated_sources = 50
+region_weights = [1.0]
+center_lons = [-23.0]
+center_lats = [62.5]
+contribution_amplitude_ratio = 0.1
+
+# boundary sources
+n_boundary_sources = 1000
+radius = 1000
+
+[Fig8]
+type = "synthetics"
+
+master_station = "IV.BRMO"
+master_station_coords = [10.37218, 46.47616]
+
+# length of correlation
+timelength = 7200
+
+# frequencies
+freq = 2
+fmin = 0.1
+fmax = 0.3
+
+# beamforming setup
+window_limits = [-3600, 3600]
+window_length = 200
+window_overlap = 0.75
+
+# slowness grid, defined in backazimuth and abs(slowness)
+backazimuth_spacing = 2
+slowness_min = 0.25
+slowness_max = 0.5
+slowness_spacing = 0.01
+
+# synthetics settings
+
+medium_velocity = 3
+
+# source type
+source_type = "microseism"
+apply_excitation_pattern_for_boundary = false
+apply_excitation_pattern_for_isolated = false
+interval = 25
+interval_count = 75
+
+phase_mode = "random"
+
+# isolated sources
+add_isolated_sources = true
+n_isolated_sources = 50
+center_lons = [-23.0, -14.5]
+center_lats = [62.5, 45.0]
+region_weights = [1.0, 2.1]
+contribution_amplitude_ratio = 0.1
+
+# boundary sources
+n_boundary_sources = 1000
+radius = 1000

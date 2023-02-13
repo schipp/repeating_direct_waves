@@ -1,0 +1,1272 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1">
+  <Source>SeisComP</Source>
+  <Sender>BGR</Sender>
+  <Module/>
+  <ModuleURI/>
+  <Created>2022-05-04T06:10:01.424250Z</Created>
+  <Network code="GR" startDate="1976-02-17T00:00:00.000000Z" restrictedStatus="open">
+    <Description>German Regional Seismic Network, BGR Hannover</Description>
+    <Station code="GRA1" startDate="1976-02-17T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.690776</Latitude>
+      <Longitude unit="DEGREES">11.220436</Longitude>
+      <Elevation>499.5</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Haidhof</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1976-02-17T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2007-09-19T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.690776</Latitude>
+        <Longitude unit="DEGREES">11.220436</Longitude>
+        <Elevation>499.5</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.960041.4490">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRA1..BHZ_2007.262_STS2" resourceId="ResponsePAZ#20120723141113.960069.4491">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRA2" startDate="1976-02-17T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.654107</Latitude>
+      <Longitude unit="DEGREES">11.358088</Longitude>
+      <Elevation>512.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Wildenfels</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1976-02-17T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2007-08-30T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.654107</Latitude>
+        <Longitude unit="DEGREES">11.358088</Longitude>
+        <Elevation>512.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.966084.4528">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRA2..BHZ_2007.242_STS2" resourceId="ResponsePAZ#20120723141113.966112.4529">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRA3" startDate="1976-02-17T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.761076</Latitude>
+      <Longitude unit="DEGREES">11.31735</Longitude>
+      <Elevation>455.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Leutzdorf</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1976-02-17T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2007-12-19T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.761076</Latitude>
+        <Longitude unit="DEGREES">11.31735</Longitude>
+        <Elevation>455.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.972021.4566">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRA3..BHZ_2007.353_STS2" resourceId="ResponsePAZ#20120723141113.97205.4567">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRA4" startDate="1976-02-17T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.5643</Latitude>
+      <Longitude unit="DEGREES">11.43454</Longitude>
+      <Elevation>503.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Stoeppach</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1976-02-17T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2010-04-26T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.5643</Latitude>
+        <Longitude unit="DEGREES">11.43454</Longitude>
+        <Elevation>503.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.976842.4598">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRA4..BHZ_2010.116_STS2" resourceId="ResponsePAZ#20120723141113.976871.4599">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRB1" startDate="1978-04-04T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.39027</Latitude>
+      <Longitude unit="DEGREES">11.65059</Longitude>
+      <Elevation>494.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Bruennthal</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-04-04T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2007-12-21T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.39027</Latitude>
+        <Longitude unit="DEGREES">11.65059</Longitude>
+        <Elevation>494.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.985693.4654">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRB1..BHZ_2007.355_STS2" resourceId="ResponsePAZ#20120723141113.985721.4655">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRB2" startDate="1978-04-04T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.269795</Latitude>
+      <Longitude unit="DEGREES">11.668055</Longitude>
+      <Elevation>552.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Reichertswinn</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-04-04T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2008-01-10T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.269795</Latitude>
+        <Longitude unit="DEGREES">11.668055</Longitude>
+        <Elevation>552.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.991314.4690">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRB2..BHZ_2008.010_STS2" resourceId="ResponsePAZ#20120723141113.991343.4691">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRB3" startDate="1978-04-04T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.3426</Latitude>
+      <Longitude unit="DEGREES">11.80465</Longitude>
+      <Elevation>517.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Eglhofen</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-04-04T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2010-04-27T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.3426</Latitude>
+        <Longitude unit="DEGREES">11.80465</Longitude>
+        <Elevation>517.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141113.996494.4724">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRB3..BHZ_2010.117_STS2" resourceId="ResponsePAZ#20120723141113.996523.4725">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRB4" startDate="1978-04-04T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.467841</Latitude>
+      <Longitude unit="DEGREES">11.55948</Longitude>
+      <Elevation>507.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Heldmannsberg</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-04-04T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2008-07-07T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.467841</Latitude>
+        <Longitude unit="DEGREES">11.55948</Longitude>
+        <Elevation>507.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.004539.4776">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRB4..BHZ_2008.189_STS2" resourceId="ResponsePAZ#20120723141114.004567.4777">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRB5" startDate="1978-04-04T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.11106</Latitude>
+      <Longitude unit="DEGREES">11.675285</Longitude>
+      <Elevation>525.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Vorderoedberg</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-04-04T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2010-04-28T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.11106</Latitude>
+        <Longitude unit="DEGREES">11.675285</Longitude>
+        <Elevation>525.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.010752.4816">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRB5..BHZ_2010.118_STS2" resourceId="ResponsePAZ#20120723141114.010781.4817">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRC1" startDate="1978-12-13T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">48.99513</Latitude>
+      <Longitude unit="DEGREES">11.52001</Longitude>
+      <Elevation>512.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Amtmannsdorf</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-12-13T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2009-04-22T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">48.99513</Latitude>
+        <Longitude unit="DEGREES">11.52001</Longitude>
+        <Elevation>512.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.021537.4882">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRC1..BHZ_2009.112_STS2" resourceId="ResponsePAZ#20120723141114.021566.4883">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRC2" startDate="1978-12-13T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">48.86656</Latitude>
+      <Longitude unit="DEGREES">11.37416</Longitude>
+      <Elevation>445.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Boehmfeld</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-12-13T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2009-07-29T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">48.86656</Latitude>
+        <Longitude unit="DEGREES">11.37416</Longitude>
+        <Elevation>445.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.027739.4920">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRC2..BHZ_2009.210_STS2" resourceId="ResponsePAZ#20120723141114.027767.4921">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRC3" startDate="1978-12-13T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">48.889145</Latitude>
+      <Longitude unit="DEGREES">11.58448</Longitude>
+      <Elevation>438.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Steinsdorf</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-12-13T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2009-10-05T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">48.889145</Latitude>
+        <Longitude unit="DEGREES">11.58448</Longitude>
+        <Elevation>438.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.033566.4958">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRC3..BHZ_2009.278_STS2" resourceId="ResponsePAZ#20120723141114.033595.4959">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+    <Station code="GRC4" startDate="1978-12-13T00:00:00.000000Z" restrictedStatus="open">
+      <Latitude unit="DEGREES">49.0857</Latitude>
+      <Longitude unit="DEGREES">11.52495</Longitude>
+      <Elevation>503.0</Elevation>
+      <Site>
+        <Name>Graefenberg Array Station Raitenbuch</Name>
+        <Country>FRG</Country>
+      </Site>
+      <CreationDate>1978-12-13T00:00:00.000000Z</CreationDate>
+      <Channel code="BHZ" startDate="2010-04-28T00:00:00.000000Z" restrictedStatus="open" locationCode="">
+        <Latitude unit="DEGREES">49.0857</Latitude>
+        <Longitude unit="DEGREES">11.52495</Longitude>
+        <Elevation>503.0</Elevation>
+        <Depth>0.0</Depth>
+        <Azimuth unit="DEGREES">0.0</Azimuth>
+        <Dip unit="DEGREES">-90.0</Dip>
+        <SampleRate unit="SAMPLES/S">20.0</SampleRate>
+        <SampleRateRatio>
+          <NumberSamples>20</NumberSamples>
+          <NumberSeconds>1</NumberSeconds>
+        </SampleRateRatio>
+        <ClockDrift unit="SECONDS/SAMPLE">0.05</ClockDrift>
+        <Sensor resourceId="Sensor#20120723141114.038724.4992">
+          <Description>STS2</Description>
+        </Sensor>
+        <DataLogger resourceId="Datalogger#20120723141113.883481.3977"/>
+        <Response>
+          <InstrumentSensitivity>
+            <Value>944019640.0</Value>
+            <Frequency>1.0</Frequency>
+            <InputUnits>
+              <Name>m/s</Name>
+              <Description>None</Description>
+            </InputUnits>
+            <OutputUnits>
+              <Name>COUNTS</Name>
+              <Description>None</Description>
+            </OutputUnits>
+          </InstrumentSensitivity>
+          <Stage number="1">
+            <PolesZeros name="GR.GRC4..BHZ_2010.118_STS2" resourceId="ResponsePAZ#20120723141114.038753.4993">
+              <InputUnits>
+                <Name>M/S</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>V</Name>
+              </OutputUnits>
+              <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+              <NormalizationFactor>1.0</NormalizationFactor>
+              <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+              <Zero number="2">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Zero number="3">
+                <Real>0.0</Real>
+                <Imaginary>0.0</Imaginary>
+              </Zero>
+              <Pole number="0">
+                <Real>-0.0367429</Real>
+                <Imaginary>0.036754</Imaginary>
+              </Pole>
+              <Pole number="1">
+                <Real>-0.0367429</Real>
+                <Imaginary>-0.036754</Imaginary>
+              </Pole>
+            </PolesZeros>
+            <StageGain>
+              <Value>944019640.0</Value>
+              <Frequency>1.0</Frequency>
+            </StageGain>
+          </Stage>
+          <Stage number="2">
+            <Coefficients>
+              <InputUnits>
+                <Name>V</Name>
+              </InputUnits>
+              <OutputUnits>
+                <Name>COUNTS</Name>
+              </OutputUnits>
+              <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+            </Coefficients>
+            <Decimation>
+              <InputSampleRate unit="HERTZ">20.0</InputSampleRate>
+              <Factor>1</Factor>
+              <Offset>0</Offset>
+              <Delay>0.0</Delay>
+              <Correction>0.0</Correction>
+            </Decimation>
+            <StageGain>
+              <Value>1.0</Value>
+              <Frequency>0.0</Frequency>
+            </StageGain>
+          </Stage>
+        </Response>
+      </Channel>
+    </Station>
+  </Network>
+</FDSNStationXML>
