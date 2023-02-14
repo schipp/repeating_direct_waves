@@ -2,11 +2,11 @@
 
 ![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
 
-(DOI placeholder)
+[DOI placeholder]
 
-This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Repeating direct waves in the coda of ambient seismic noise cross correlations" by Schippkus et al. (2023), submitted to Seismica for review.
+This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Repeating direct waves in the coda of ambient seismic noise cross correlations" by Schippkus et al. (2023), to be submitted for review.
 
-`\manuscript` contains the pre-print pdf. Also available (and citable!) on EarthArXiv [].
+[NYI] `\manuscript` contains the pre-print pdf. Also available (and citable!) on EarthArXiv [soon].
 
 `\notebooks` contains three notebooks: `fig3_repeating_impulsive_source.ipynb` reproduces Figure 3, `fig5_secondary_microseism_stf.ipynb` reproduces Figure 5, and `figs.ipynb` reproduces all other figures. Please read the instructions in the first cell of `figs.ipynb` carefully. `settings.toml` describes the parameters used for each figure. `schippkus_2023_lib.py` contains much of the logic for computing waveforms, cross-correlating them, and beamforming the cross correlations.
 
