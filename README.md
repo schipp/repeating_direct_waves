@@ -1,8 +1,8 @@
 # Repeating direct waves in the coda of ambient seismic noise cross correlations
 
-![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
+![doi](https://img.shields.io/badge/doi-placeholder-blue) ![python 3.11 only](https://img.shields.io/badge/python-3.11-blue)
 
-[DOI placeholder]
+![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
 
 This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Repeating direct waves in the coda of ambient seismic noise cross correlations" by Schippkus et al. (2023), to be submitted for review.
 
