@@ -1,6 +1,6 @@
 # Repeating direct waves in the coda of ambient seismic noise cross correlations
 
-![doi](https://img.shields.io/badge/doi-placeholder-blue) ![python 3.11 only](https://img.shields.io/badge/python-3.11-blue)
+[![DOI](https://zenodo.org/badge/601300942.svg)](https://zenodo.org/badge/latestdoi/601300942) ![python 3.11 only](https://img.shields.io/badge/python-3.11-blue)
 
 ![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
 
