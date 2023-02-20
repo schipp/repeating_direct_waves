@@ -49,9 +49,10 @@ def parse_correlations_from_disk(settings):
     from obspy import read
 
     corrs = []
+    corr_dir = "../correlations/"
     for sta in settings["station_coords_sorting"]:
         st = read(
-            f"../correlations/{settings['master_station'].split('.')[1]}.{sta}.sac",
+            f"{corr_dir}/{settings['master_station'].split('.')[1]}.{sta}.sac",
             format="sac",
         )
         corrs.append(st[0].data)
@@ -186,8 +187,6 @@ def compute_synthetic_correlations(
     from scipy.signal import fftconvolve
     from tqdm import tqdm
 
-    # isolated_source_mean = np.mean(isolated_sources, axis=0)
-    # time stuffs
     times = np.arange(
         0, settings["timelength"] + 1 / settings["freq"], 1 / settings["freq"]
     )
@@ -219,6 +218,7 @@ def compute_synthetic_correlations(
         )
         stfs_isolated_sources_per_region.append(stfs_isolated_sources)
 
+    # isolated_source_mean = np.mean(isolated_sources, axis=0)
     # compute waveforms for array stations
     boundary_source_waveforms_per_array_station = []
     for station in tqdm(settings["station_coords"], desc="waveforms"):
@@ -347,7 +347,6 @@ def compute_synthetic_correlations(
 def beamforming(data, slowness_space, settings, lapsetimes, windows, coordinates):
 
     import numpy as np
-    from tqdm import tqdm
 
     # estimate best starttime and endtime points
     starttime_idxs = [
@@ -380,40 +379,62 @@ def beamforming(data, slowness_space, settings, lapsetimes, windows, coordinates
         :, :, np.where((f > settings["fmin"]) & (f < settings["fmax"]))[0]
     ]
 
-    # beamforming for each time window
-    beampowers_for_time = []
-    for data_spectra in tqdm(data_spectra_all_limited, desc="beamforming"):
-        # compute cross-spectral density matrix K
-        K = np.einsum("iw,jw->ijw", data_spectra, np.conj(data_spectra))
+    zero_spectra = np.zeros(omega_limited.shape).astype(complex)
 
-        # remove auto-correlations, i.e., energy-scaling of beampowers
-        # this yields beampowers in the range -1 to 1
-        zero_spectra = np.zeros(omega_limited.shape).astype(complex)
-        for idx in range(K.shape[0]):
-            K[idx, idx, :] = zero_spectra
+    # compute all traveltimes for all slowness - station combinations
+    # relative to the reference point, which is arbitrary but must be reasonably nearby
+    #
+    # einsum dimension labels
+    # - n: station dimension, number of stations
+    # - s: slowness dimension, number of slowness grid points
+    # - x: spatial dimensions, here 2D (only surface coordinates)
+    traveltimes_space = np.einsum(
+        "nx, sx -> sn", settings["reference_point"] - coordinates, slowness_space
+    )
 
-        # compute all traveltimes for all slowness - station combinations
-        traveltimes_space = np.einsum(
-            "nx, sx -> sn", settings["reference_point"] - coordinates, slowness_space
-        )
+    # compute synthetic spectra, i.e., plane waves, for traveltimes above
+    # other names: replica vectors, Green's functions
+    #
+    # einsum dimension labels
+    # - w: frequency dimension, number of frequencies in band [fmin, fmax]
+    # - s: slowness dimension, number of slowness grid points
+    # - n: station dimension, number of stations
+    synth_spectra_space = np.exp(
+        -1j * np.einsum("w, sn -> snw", omega_limited, traveltimes_space)
+    )
 
-        # compute synthetic spectra, i.e., plane waves, using computed traveltimes
-        synth_spectra_space = np.exp(
-            -1j * np.einsum("w, sn->snw", omega_limited, traveltimes_space)
-        )
+    # cross-spectral density matrix K for each beamforming window
+    # contains cross correlations of all input signals
+    #
+    # einsum dimension labels
+    # - t: timewindow dimension, number of beampower windows
+    # - i: first station dimension, number of stations
+    # - j: second station dimension, number of stations
+    # - w: frequency dimension, number of frequencies in band [fmin, fmax]
+    K = np.einsum(
+        "tiw, tjw -> tijw", data_spectra_all_limited, np.conj(data_spectra_all_limited)
+    )
+    # K = np.einsum("iw,jw->ijw", data_spectra, np.conj(data_spectra), optimize=True)
 
-        # conventional beamformer
-        # for-loop faster and more memory efficent than a 3D einsum implementation (??)
-        beampowers = []
-        for synth_spectra in synth_spectra_space:
-            beampower = np.sum(
-                np.real(
-                    np.einsum("iw,ijw,jw->w", np.conj(synth_spectra), K, synth_spectra)
-                )
-            )
-            beampowers.append(beampower)
+    # remove auto-correlations, i.e., energy-scaling of beampowers
+    # this yields beampowers in range [-max, max]
+    for idx in range(K.shape[1]):
+        K[:, idx, idx, :] = zero_spectra
 
-        beampowers_for_time.append(beampowers)
+    # conventional beamformer
+    # B = Σ_ω Σ_i Σ_j s^*_i(ω) K_ij(ω) s_j(ω)
+    # for more details, see e.g., Schippkus et al. 2022
+
+    # einsum dimension labels
+    # - t: timewindow dimension, number of beampower windows
+    # - s: slowness dimension, number of slowness grid points
+    # - i: first station dimension, number of stations
+    # - j: second station dimension, number of stations
+    # - w: frequency dimension, number of frequencies in band [fmin, fmax]
+
+    beampowers_for_time = np.einsum(
+        "siw, tijw, sjw -> ts", np.conj(synth_spectra_space), K, synth_spectra_space
+    ).real
     return np.array(beampowers_for_time)
 
 
