@@ -102,7 +102,8 @@ radius = 1000
 type = "synthetics"
 
 master_station = "IV.BRMO"
-master_station_coords = [10.37218, 46.47616]
+# master_station_coords = [10.37218, 46.47616]
+master_station_coords = [20.0, 50.0]
 
 # length of correlation
 timelength = 7200
@@ -152,6 +153,7 @@ type = "synthetics"
 
 master_station = "IV.BRMO"
 master_station_coords = [10.37218, 46.47616]
+# master_station_coords = [20.0, 50.0]
 
 # length of correlation
 timelength = 7200
@@ -190,7 +192,8 @@ n_isolated_sources = 50
 region_weights = [1.0]
 center_lons = [-23.0]
 center_lats = [62.5]
-contribution_amplitude_ratio = 0.1
+# contribution_amplitude_ratio = 0.1
+contribution_amplitude_ratio = 1
 
 # boundary sources
 n_boundary_sources = 1000
@@ -240,7 +243,9 @@ n_isolated_sources = 50
 center_lons = [-23.0, -14.5]
 center_lats = [62.5, 45.0]
 region_weights = [1.0, 2.1]
+# region_weights = [1.0, 1.0]
 contribution_amplitude_ratio = 0.1
+# contribution_amplitude_ratio = 1
 
 # boundary sources
 n_boundary_sources = 1000

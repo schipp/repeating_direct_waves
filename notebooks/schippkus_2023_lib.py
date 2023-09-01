@@ -44,12 +44,11 @@ def parse_station_coordinates_from_inventory(inv_file="../meta/graefenberg.stati
     return array(coords_latlon), station_coords_sorting
 
 
-def parse_correlations_from_disk(settings):
+def parse_correlations_from_disk(settings, corr_dir="../correlations/"):
     from numpy import array
     from obspy import read
 
     corrs = []
-    corr_dir = "../correlations/"
     for sta in settings["station_coords_sorting"]:
         st = read(
             f"{corr_dir}/{settings['master_station'].split('.')[1]}.{sta}.sac",
@@ -255,35 +254,47 @@ def compute_synthetic_correlations(
         )
 
     # compute waveforms for master station
-    boundary_source_waveforms_master_station = compute_synthetic_seismograms_for_sources(
-        station=settings["master_station_coords"],
-        sources=boundary_sources,
-        stfs=stfs_boundary_sources,
-        freqs=freqs,
-        settings=settings,
+    boundary_source_waveforms_master_station = (
+        compute_synthetic_seismograms_for_sources(
+            station=settings["master_station_coords"],
+            sources=boundary_sources,
+            stfs=stfs_boundary_sources,
+            freqs=freqs,
+            settings=settings,
+        )
     )
+
+    # boundary_source_waveforms_master_station = np.random.uniform(
+    #     low=-1, high=1, size=boundary_source_waveforms_master_station.shape
+    # )
 
     isolated_source_waveforms_master_station_per_region = []
     for isolated_sources, stfs_isolated_sources in zip(
         isolated_sources_per_region, stfs_isolated_sources_per_region
     ):
-        isolated_source_waveforms_master_station = compute_synthetic_seismograms_for_sources(
-            station=settings["master_station_coords"],
-            sources=isolated_sources,
-            stfs=stfs_isolated_sources,
-            freqs=freqs,
-            settings=settings,
+        isolated_source_waveforms_master_station = (
+            compute_synthetic_seismograms_for_sources(
+                station=settings["master_station_coords"],
+                sources=isolated_sources,
+                stfs=stfs_isolated_sources,
+                freqs=freqs,
+                settings=settings,
+            )
         )
         isolated_source_waveforms_master_station_per_region.append(
             isolated_source_waveforms_master_station
         )
-    isolated_source_waveforms_master_station_per_region = np.mean(
-        isolated_source_waveforms_master_station_per_region, axis=0
-    )
+    # isolated_source_waveforms_master_station_per_region = np.mean(
+    #     isolated_source_waveforms_master_station_per_region, axis=0
+    # )
 
     mean_isolated_source_waveforms_master_station = np.mean(
         isolated_source_waveforms_master_station, axis=0
     )
+
+    # mean_isolated_source_waveforms_master_station = np.random.uniform(
+    #     low=-1, high=1, size=mean_isolated_source_waveforms_master_station.shape
+    # )
 
     # correlate boundary source waveforms
     boundary_source_correlations = []
@@ -303,7 +314,7 @@ def compute_synthetic_correlations(
 
     # correlate isolated sources waveforms
     isolated_source_correlations_per_region = []
-    for (isolated_source_waveforms_per_array_station, region_weight) in zip(
+    for isolated_source_waveforms_per_array_station, region_weight in zip(
         isolated_source_waveforms_per_array_station_per_region,
         settings["region_weights"],
     ):
@@ -345,7 +356,6 @@ def compute_synthetic_correlations(
 
 
 def beamforming(data, slowness_space, settings, lapsetimes, windows, coordinates):
-
     import numpy as np
 
     # estimate best starttime and endtime points
@@ -465,7 +475,6 @@ def compute_correlation_with_beams(
 
     corr_coeffs_for_windows = []
     for starttime, (vel, baz, amp) in zip(windows, peaks):
-
         # extract time window from correlations
         starttime_idx = np.argmin(np.abs(lapsetimes - starttime))
         endtime_idx = np.argmin(
