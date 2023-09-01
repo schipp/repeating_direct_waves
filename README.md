@@ -6,13 +6,13 @@
 
 This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Repeating direct waves in the coda of ambient seismic noise cross correlations" by Schippkus et al. (2023), to be submitted for review.
 
-[NYI] `\manuscript` contains the pre-print pdf. Also available (and citable!) on EarthArXiv [soon].
+`\manuscript` contains the revised manuscript pre-print pdf. Also available (and citable!) on [EarthArXiv](https://doi.org/10.31223/X52M20).
 
-`\notebooks` contains three notebooks: `fig3_repeating_impulsive_source.ipynb` reproduces Figure 3, `fig5_secondary_microseism_stf.ipynb` reproduces Figure 5, and `figs.ipynb` reproduces all other figures. Please read the instructions in the first cell of `figs.ipynb` carefully. `settings.toml` describes the parameters used for each figure. `schippkus_2023_lib.py` contains much of the logic for computing waveforms, cross-correlating them, and beamforming the cross correlations.
+`\notebooks` contains three notebooks: `fig3_repeating_impulsive_source.ipynb` reproduces Figure 3, `fig4_sketch.ipynb` reproduces Figure 4, `fig6_secondary_mic roseism_stf.ipynb` reproduces Figure 6, `fig10_processing.ipynb` reproduces Figure 10, and `figs.ipynb` reproduces all other figures. Please read the instructions in the first cell of `figs.ipynb` carefully. `settings.toml` describes the parameters used for each figure. `schippkus_2023_lib.py` contains much of the logic for computing waveforms, cross-correlating them, and beamforming the cross correlations.
 
 `\correlations` contains all cross-correlation functions our measurements are based on. These are computed from 2 years of continuous data in 2019 & 2020 between master stations `IV.BRMO` & `PL.OJC` and the Gräfenberg array `GR.GR*`.
 
-`\figures` contains all figures as produced by the notebooks provided.
+`\figures` contains all figures as produced by the notebooks provided and used in the manuscript.
 
 ## Requirements
 
