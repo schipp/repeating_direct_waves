@@ -14,6 +14,8 @@ This repository contains all data products, metadata, and code necessary to repr
 
 `\figures` contains all figures as produced by the notebooks provided and used in the manuscript.
 
+`colorblind.mplstyle` is the matplotlib style-file used for some notebooks.
+
 ## Requirements
 
 To run these notebooks, the following is required
