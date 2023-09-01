@@ -1,10 +1,10 @@
-# Repeating direct waves in the coda of ambient seismic noise cross correlations
+# Continuous isolated noise sources induce repeating waves in the coda of ambient noise correlations
 
 [![DOI](https://zenodo.org/badge/601300942.svg)](https://zenodo.org/badge/latestdoi/601300942) ![python 3.11 only](https://img.shields.io/badge/python-3.11-blue)
 
 ![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
 
-This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Repeating direct waves in the coda of ambient seismic noise cross correlations" by Schippkus et al. (2023), to be submitted for review.
+This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Continuous isolated noise sources induce repeating waves in the coda of ambient noise correlations" by Schippkus et al. (2023), in review.
 
 `\manuscript` contains the revised manuscript pre-print pdf. Also available (and citable!) on [EarthArXiv](https://doi.org/10.31223/X52M20).
 
