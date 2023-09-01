@@ -50,7 +50,7 @@ slowness_min = 0.25
 slowness_max = 0.5
 slowness_spacing = 0.005
 
-[Fig4]
+[Fig5]
 type = "synthetics"
 
 master_station = "IV.BRMO"
@@ -98,7 +98,7 @@ contribution_amplitude_ratio = 0.25
 n_boundary_sources = 1000
 radius = 1000
 
-[Fig6]
+[Fig7]
 type = "synthetics"
 
 master_station = "IV.BRMO"
@@ -148,7 +148,7 @@ contribution_amplitude_ratio = 1
 n_boundary_sources = 1000
 radius = 1000
 
-[Fig7]
+[Fig8]
 type = "synthetics"
 
 master_station = "IV.BRMO"
@@ -199,7 +199,7 @@ contribution_amplitude_ratio = 1
 n_boundary_sources = 1000
 radius = 1000
 
-[Fig8]
+[Fig9]
 type = "synthetics"
 
 master_station = "IV.BRMO"
