@@ -4,9 +4,9 @@
 
 ![Beamforming results for master station IV.BRMO](./figures/Fig1_IV.BRMO.png)
 
-This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Continuous isolated noise sources induce repeating waves in the coda of ambient noise correlations" by Schippkus et al. (2023), in review.
+This repository contains all data products, metadata, and code necessary to reproduce all figures of the manuscript "Continuous isolated noise sources induce repeating waves in the coda of ambient noise correlations" by Schippkus et al. (2023), Seismica.
 
-`\manuscript` contains the revised manuscript pre-print pdf. Also available (and citable!) on [EarthArXiv](https://doi.org/10.31223/X52M20).
+`\manuscript` contains the revised manuscript pre-print pdf. Published in [Seismica](https://doi.org/10.26443/seismica.v2i2.499).
 
 `\notebooks` contains three notebooks: `fig3_repeating_impulsive_source.ipynb` reproduces Figure 3, `fig4_sketch.ipynb` reproduces Figure 4, `fig6_secondary_mic roseism_stf.ipynb` reproduces Figure 6, `fig10_processing.ipynb` reproduces Figure 10, and `figs.ipynb` reproduces all other figures. Please read the instructions in the first cell of `figs.ipynb` carefully. `settings.toml` describes the parameters used for each figure. `schippkus_2023_lib.py` contains much of the logic for computing waveforms, cross-correlating them, and beamforming the cross correlations.
 
